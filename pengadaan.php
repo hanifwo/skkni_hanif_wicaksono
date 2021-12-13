@@ -2,7 +2,7 @@
 
 require_once("connection.php");
 
-$query = "SELECT * FROM buku ORDER BY stok ASC";
+$query = "SELECT *, MIN(stok) as stok FROM buku";
 
 $result = mysqli_query($mysqli, $query);
 
